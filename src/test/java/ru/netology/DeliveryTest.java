@@ -19,11 +19,11 @@ public class DeliveryTest {
     @Test
     public void shouldBeSuccessfullyCompleted() {
         open("http://localhost:9999");
-        $("[data-test-id='city'] input").setValue("Москва");
+        $("[data-test-id='city'] input").setValue("Самара");
         String planningDate = generateDate(3,"dd.MM.yyyy");
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
         $("[data-test-id='date'] input").setValue(planningDate);
-        $("[data-test-id='name'] input").setValue("Петров-Иванов Сергей");
+        $("[data-test-id='name'] input").setValue("Тест-Тест Тест");
         $("[data-test-id='phone'] input").setValue("+79000000000");
         $("[data-test-id='agreement']").click();
         $("button.button").click();
